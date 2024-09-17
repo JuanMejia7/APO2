@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class TablaTemp {
+    public static void main(String[] args) {
+        String[] ciudades = {"Cali", "Medellín", "Pasto", "Barranquilla", "Manizales"};
+
+        int numFilas = 100;
+
+        Random random = new Random();
+
+        System.out.printf("%-15s %-20s%n", "Ciudad", "Temperatura (°C)");
+        System.out.println("------------------------------------");
+
+
+        for (int i = 0; i < numFilas; i++) {
+            for (String ciudad : ciudades) {
+                int temperatura = 15 + random.nextInt(21); 
+                System.out.printf("%-15s %2d%n", ciudad, temperatura);
+            }
+            System.out.println("------------------------------------");
+        }
+    }
+}
