@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Calculadora
+{
+    public static void main(String [] args)
+    {
+        int val1, val2, res, operacion;
+        Scanner lector=new Scanner(System.in);
+        System.out.println("Escriba el primer numero que quiere operar");
+         val1= lector.nextInt();
+         System.out.println("Escriba el segundo numero que quiere operar");
+         val2= lector.nextInt();
+         System.out.println("Escoga que operacion desea hacer \n1.Suma \n2.Resta \n3.Multiplicacion");
+        operacion= lector.nextInt();
+        
+        
+        switch (operacion) {
+            case 1->{
+            res= Suma (val1, val2);
+            System.out.println("El resultado de la operacion es:" +res);
+                break;
+            }
+                case 2->{
+                res= Resta (val1, val2);
+                System.out.println("El resultado de la operacion es:" +res);
+                break;
+                }
+                case 3->{
+                res= Multiplicacion (val1, val2);
+                System.out.println("El resultado de la operacion es:" +res);
+                break;
+                }
+        
+            default->{System.out.println("Opcion invalida");
+            }
+        }
+         
+
+
+    }
+public static int Suma (int a, int b)
+{
+    int s=a+b;
+    return s;
+}
+public static int Resta (int a, int b)
+{
+int r=a-b;
+return r;
+}
+public static int Multiplicacion (int a, int b)
+{
+    int m=a*b;
+    return m;
+    }
+
+}
