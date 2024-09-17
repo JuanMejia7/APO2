@@ -1,0 +1,38 @@
+import java.util.*;
+public class Conversion
+{
+    public static void main (String[] args)
+    {
+    int Conversion;
+    float Resultado, Valor;
+    Scanner lector= new Scanner(System.in); 
+    System.out.print("Escoga su opcion de acuerdo a la conversion que desea realizar \n1.°C->°F \n2.°F->°C \n3.°C->°K \n4.°K->°C\n");
+    Conversion= lector.nextInt();
+    System.out.print("Que valor quiere convertir");
+    Valor= lector.nextFloat();
+
+ switch (Conversion)
+{
+    case 1->{
+        Resultado=(Valor*1.8f)+32f;
+        System.out.print("La conversion de °C-F es:" +Resultado);
+    }
+    case 2->{
+        Resultado=(Valor-32f)/1.8f;
+        System.out.print("La conversion de °F-°C es:" +Resultado);
+    }
+    case 3->{
+        Resultado=(Valor+273.15f);
+    System.out.print("La conversion de °C-°K es: "+Resultado);
+    }
+    case 4->{
+        Resultado=(Valor-273.15f);
+        System.out.print("La conversion de °K-°C es:" +Resultado);
+    }
+    default->{
+        System.out.print("Opcion no valida");
+    } 
+}
+    }
+    }
+
